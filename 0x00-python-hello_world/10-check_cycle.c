@@ -13,6 +13,8 @@ int check_cycle(listint_t *list)
 	listint_t *rabbit_n = NULL;
 	int found = 0;
 
+	if (!list)
+		return (0);
 	while (1)
 	{
 		turtle_n = turtle->next;
