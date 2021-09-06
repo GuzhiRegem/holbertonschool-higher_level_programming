@@ -1,4 +1,4 @@
-#include "lists.h"
+B#include "lists.h"
 
 /**
  *check_cycle - check for loops in linked list
@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 	listint_t *rabbit_n = NULL;
 	int found = 0;
 
-	while(1)
+	while (1)
 	{
 		turtle_n = turtle->next;
 		rabbit_n = rabbit->next;
@@ -24,5 +24,5 @@ int check_cycle(listint_t *list)
 		turtle = turtle_n;
 		rabbit = rabbit_n->next;
 	}
-	return(found);
+	return (found);
 }
