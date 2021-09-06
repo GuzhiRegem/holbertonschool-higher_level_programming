@@ -1,5 +1,10 @@
 #include "lists.h"
 
+/**
+ *check_cycle - check for loops in linked list
+ *@list: head of the list
+ *Return: 0 if no loop, 1 if loop
+ */
 int check_cycle(listint_t *list)
 {
 	listint_t *turtle = list;
