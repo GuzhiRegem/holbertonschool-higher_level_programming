@@ -13,4 +13,3 @@ def fizzbuzz():
             out = str(num)
         print("{} ".format(out), end="")
     print()
-fizzbuzz()
