@@ -12,4 +12,3 @@ def fizzbuzz():
         if out == "":
             out = str(num)
         print("{} ".format(out), end="")
-    print()
