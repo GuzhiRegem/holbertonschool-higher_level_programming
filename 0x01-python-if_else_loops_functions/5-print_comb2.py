@@ -3,4 +3,4 @@ for number in range(100):
     sep = '\n'
     if (number < 99):
         sep = ", "
-    print("{}{}".format(number, sep), end="")
+    print("{:02d}{}".format(number, sep), end="")
