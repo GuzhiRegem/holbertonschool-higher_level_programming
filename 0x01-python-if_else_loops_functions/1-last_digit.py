@@ -6,7 +6,7 @@ if number >= 0:
 else:
     digit = ((number * -1) % 10) * -1
 sig = "0"
-if digit > 0:
+if digit != 0:
     sig = "less than 6 and not 0"
     if digit > 5:
         sig = "greater than 5"
