@@ -7,3 +7,4 @@ if __name__ == "__main__":
     print("{} - {} = {}".(a, b, calc.sub(a, b)))
     print("{} * {} = {}".(a, b, calc.mul(a, b)))
     print("{} / {} = {}".(a, b, calc.div(a, b)))
+
