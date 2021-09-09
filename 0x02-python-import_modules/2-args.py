@@ -8,4 +8,4 @@ if __name__ == "__main__":
         word += "s"
     print("{} {}{}".format(arguments, word, ":" if arguments else "."))
     for indx in range(len(args)):
-        print("{}: {}".format(indx, args[indx]))
+        print("{}: {}".format(indx + 1, args[indx]))
