@@ -18,4 +18,3 @@ if __name__ == "__main__":
     oper_f = [calc.add, calc.sub, calc.mul, calc.div]
     res = oper_f[op](ar1, ar2)
     print("{} {} {} = {}".format(ar1, operations[op], ar2, res))
-
