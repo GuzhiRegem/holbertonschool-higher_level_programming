@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-import sys
 if __name__ == "__main__":
+    import sys
     args = sys.argv[1:]
     arguments = len(args)
-    print("{} argument{}{}".format(arguments, "s" if arguments != 1 else "", ":" if arguments else "."))
+    word = "argument"
+    if arguments != 1:
+        word += "s"
+    print("{} {}{}".format(arguments, word, ":" if arguments else "."))
     for indx in range(len(args)):
         print("{}: {}".format(indx, args[indx]))
