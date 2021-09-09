@@ -12,7 +12,7 @@ if __name__ == "__main__":
         op = operations.index(args[2])
     else:
         print("Unknown operator. Available operators: +, -, * and /")
-        sys.exit(0)
+        sys.exit(1)
     ar1 = int(args[1])
     ar2 = int(args[3])
     oper_f = [calc.add, calc.sub, calc.mul, calc.div]
