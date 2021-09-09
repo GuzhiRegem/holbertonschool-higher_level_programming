@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-if __name__ == "__main__":
-    import sys
+import sys
+if __name__ == "__main__" and sys.argv:
     args = sys.argv[1:]
     arguments = len(args)
     word = "argument"
