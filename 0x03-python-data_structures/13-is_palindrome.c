@@ -26,8 +26,8 @@ int get_at_idx(listint_t **head, int idx)
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *first;
-	int lar, idx1, out = 1;
+	listint_t *first, *one, *two;
+	int lar, idx1, out = 1, i = 0;
 
 	first = *head;
 	if (!first)
@@ -40,7 +40,15 @@ int is_palindrome(listint_t **head)
 	}
 	for (idx1 = 0; idx1 < (lar / 2); idx1++)
 	{
-		if (get_at_idx(head, idx1) != get_at_idx(head, lar - idx1 - 1))
+		two = *head;
+		while (i < (lar - idx1 - 1))
+		{
+			if (i == idx1)
+				one = two;
+			two = two->next;
+			i++;
+		}
+		if (one != two)
 		{
 			out = 0;
 			break;
