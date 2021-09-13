@@ -29,6 +29,8 @@ int is_palindrome(listint_t **head)
 	listint_t *first, *one, *two;
 	int lar, idx1, out = 1, i = 0;
 
+	if (!head)
+		return (1);
 	first = *head;
 	if (!first)
 		return (1);
@@ -48,7 +50,7 @@ int is_palindrome(listint_t **head)
 			two = two->next;
 			i++;
 		}
-		if (one != two)
+		if (one->n != two->n)
 		{
 			out = 0;
 			break;
