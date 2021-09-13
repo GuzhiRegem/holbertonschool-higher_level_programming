@@ -1,5 +1,5 @@
 #include "lists.h"
-
+#include <stdio.h>
 /**
  * get_at_idx - gets a index
  * @head: a
@@ -34,8 +34,10 @@ int is_palindrome(listint_t **head)
 		return (1);
 	lar = 0;
 	while (first)
+	{
 		first = first->next;
 		lar++;
+	}
 	for (idx1 = 0; idx1 < (lar / 2); idx1++)
 	{
 		if (get_at_idx(head, idx1) != get_at_idx(head, lar - idx1 - 1))
