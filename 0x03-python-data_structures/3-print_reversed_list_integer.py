@@ -4,9 +4,9 @@
 def print_reversed_list_integer(my_list=[]):
     lar = len(my_list)
     if lar == 0:
-        my_list = [""]
+        print("{}".format("\n"), end="")
     for idx in range(lar):
         print("{:d}".format(my_list[-(idx + 1)]))
 
-my_list = []
+my_list = [1]
 print_reversed_list_integer(my_list)
