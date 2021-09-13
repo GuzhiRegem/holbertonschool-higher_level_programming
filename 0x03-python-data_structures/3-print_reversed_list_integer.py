@@ -7,6 +7,3 @@ def print_reversed_list_integer(my_list=[]):
         print("{}".format("\n"), end="")
     for idx in range(lar):
         print("{:d}".format(my_list[-(idx + 1)]))
-
-my_list = [1]
-print_reversed_list_integer(my_list)
