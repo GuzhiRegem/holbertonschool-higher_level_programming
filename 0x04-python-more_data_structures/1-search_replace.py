@@ -4,6 +4,13 @@
 def search_replace(my_list, search, replace):
         out = my_list[:]
         for a, i in enumerate(out):
-                if a == search:
-                        out[i] = replace
+                if i == search:
+                        out[a] = replace
         return out
+
+my_list = [1, 2, 3, 4, 5, 4, 2, 1, 1, 4, 89]
+new_list = search_replace(my_list, 2, 89)
+
+print(new_list)
+print(my_list)
+
