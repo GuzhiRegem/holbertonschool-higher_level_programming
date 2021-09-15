@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 
 
-def multiply_by_2(a_dictionary):
-        out = a_dictionary[0]
+def best_score(a_dictionary):
+        out = list(a_dictionary.items())[0][1]
         for i in a_dictionary.items():
                 if i[1] > out:
                         out = i[1]
