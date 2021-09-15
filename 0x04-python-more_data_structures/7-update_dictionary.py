@@ -2,6 +2,5 @@
 
 
 def update_dictionary(a_dictionary, key, value):
-        out = dict(a_dictionary)
-        out[key] = value
-        return out
+        a_dictionary[key] = value
+        return a_dictionary
