@@ -12,4 +12,4 @@ def roman_to_int(roman_string):
                         lis[i] = lis[i] - lis[i-1]
                         del lis[i-1]
                         i -= 1
-        return lis
+        return sum(lis)
