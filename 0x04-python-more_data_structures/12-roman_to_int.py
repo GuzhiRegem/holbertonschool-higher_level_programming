@@ -6,8 +6,9 @@ def roman_to_int(roman_string):
         lis = []
         val = {'I': 1, 'V': 5, 'X': 10, 'L': 50, 'C': 100, 'D': 500, 'M': 1000}
         for i in roman_string:
-                if i in val:
-                        lis.append(val[i])
+                if i not in val:
+                        return None
+                lis.append(val[i])
         rm = []
         for i in range(len(lis)):
                 if lis[i] > lis[i - 1 if i > 0 else 0]:
