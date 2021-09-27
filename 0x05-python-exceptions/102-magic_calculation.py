@@ -1,8 +1,7 @@
 #!/usr/bin/python3
-safe_print_list(my_list=[], x=0):
-    num = 0
-    try:
-        for li in range(x):
-            print("{}".format(my_list[li]))
-            num += 1
-    return (num)
+def magic_calculation(a, b):
+    result = 0
+    while result < 10:
+        result += 1
+        print(result)
+    return result
