@@ -1,8 +1,9 @@
 #!/usr/bin/python3
-safe_print_list(my_list=[], x=0):
-    num = 0
+import sys
+def safe_print_integer_err(value):
     try:
-        for li in range(x):
-            print("{}".format(my_list[li]))
-            num += 1
-    return (num)
+        print("{:d}".format(value))
+        return True
+    except Exception as exe:
+        sys.stderr.write("Exception: {}\n".format(str(exe)))
+        return False
