@@ -1,3 +1,10 @@
 #!/usr/bin/python3
-safe_print_integer(value):
-    
+def safe_print_division(a, b):
+    num = 0
+    try:
+        num = a / b
+    except:
+        num = None
+    finally:
+        print("Inside result: {}".format(num))
+    return num
