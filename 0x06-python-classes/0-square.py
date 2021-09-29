@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-	square.py
+    square.py
     Square
     return {}
 """
