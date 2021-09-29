@@ -12,8 +12,14 @@ class Node:
     """
     def __init__(self, data, next_node=None):
         """ arro """
-        self.__data = data
-        self.__next_node = next_node
+        if isinstance(data, int):
+            self.__data = data
+        else:
+            raise TypeError("data must be an integer")
+        if isinstance(next_node, Node) or next_node is None:
+            self.__next_node = next_node
+        else:
+            raise TypeError("next_node must be a Node object")
 
     @property
     def data(self):
