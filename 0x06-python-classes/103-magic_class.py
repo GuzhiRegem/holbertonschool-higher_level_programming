@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-import math
 """
     magic
     return {}
 """
+import math
 
 
 class MagicClass:
