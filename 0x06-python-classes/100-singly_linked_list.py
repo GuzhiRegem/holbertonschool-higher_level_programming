@@ -14,7 +14,7 @@ class Node:
         """ arro """
         self.__data = data
         self.__next_node = next_node
-    
+
     @property
     def data(self):
         """ data """
@@ -41,6 +41,7 @@ class Node:
         else:
             raise TypeError("next_node must be a Node object")
 
+
 class SinglyLinkedList:
     """
         SinglyLinkedList
@@ -55,7 +56,7 @@ class SinglyLinkedList:
             node = Node(value, None)
         except TypeError:
             return
-        if self.__head == None:
+        if self.__head is None:
             self.__head = node
         else:
             ptr = self.__head
@@ -63,7 +64,7 @@ class SinglyLinkedList:
                 node.next_node = self.__head
                 self.__head = node
                 return
-            while ptr.next_node != None:
+            while ptr.next_node is not None:
                 if ptr.next_node.data >= value:
                     break
                 ptr = ptr.next_node
@@ -73,23 +74,9 @@ class SinglyLinkedList:
     def __str__(self):
         """ str """
         he = self.__head
-        if he == None:
+        if he is None:
             return ""
         while he.next_node is not None:
             print("{}".format(he.data))
             he = he.next_node
         return str(he.data)
-
-sll = SinglyLinkedList()
-sll.sorted_insert(2)
-sll.sorted_insert(5)
-sll.sorted_insert(3)
-sll.sorted_insert(10)
-sll.sorted_insert(1)
-sll.sorted_insert(-4)
-sll.sorted_insert(-3)
-sll.sorted_insert(4)
-sll.sorted_insert(5)
-sll.sorted_insert(12)
-sll.sorted_insert(3)
-print(sll)
