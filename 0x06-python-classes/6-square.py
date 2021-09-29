@@ -23,6 +23,8 @@ class Square:
             try:
                 if position[0] >= 0 and position[1] >= 0:
                     self.__position = position
+                else:
+                    raise TypeError(msg)
             except TypeError:
                 raise TypeError(msg)
         else:
@@ -60,6 +62,8 @@ class Square:
             try:
                 if position[0] >= 0 and position[1] >= 0:
                     self.__position = position
+                else:
+                    raise TypeError(msg)
             except TypeError:
                 raise TypeError(msg)
         else:
