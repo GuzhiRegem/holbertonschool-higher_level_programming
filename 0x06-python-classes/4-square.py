@@ -13,9 +13,11 @@ class Square:
     def __init__(self, size=0):
         """ init """
         self.__size = size
+
     def area(self):
         """ area """
         return self.__size ** 2
+
     @property
     def size(self):
         """ size """

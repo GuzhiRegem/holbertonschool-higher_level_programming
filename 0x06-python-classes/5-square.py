@@ -13,9 +13,11 @@ class Square:
     def __init__(self, size=0):
         """ init """
         self.__size = size
+
     def area(self):
         """ area """
         return self.__size ** 2
+
     @property
     def size(self):
         """ size """
@@ -30,6 +32,7 @@ class Square:
             raise ValueError('size must be >= 0')
         else:
             self.__size = value
+
     def my_print(self):
         """ my print """
         for y in range(self.__size):
@@ -37,4 +40,4 @@ class Square:
                 print("#", end="")
             print()
         if not self.__size:
-                print()
+            print()
