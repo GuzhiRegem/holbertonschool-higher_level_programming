@@ -82,6 +82,7 @@ class Square:
             for x in range(self.__size):
                 print("#", end="")
             print()
+
     def __str__(self):
         """ print """
         out = ""
@@ -94,5 +95,14 @@ class Square:
                 out += " "
             for x in range(self.__size):
                 out += "#"
-            out += "\n"
+            if y + 1 < self.__size:
+                out += "\n"
         return out
+
+my_square = Square(5, (0, 0))
+print(my_square)
+
+print("--")
+
+my_square = Square(5, (4, 1))
+print(my_square)
