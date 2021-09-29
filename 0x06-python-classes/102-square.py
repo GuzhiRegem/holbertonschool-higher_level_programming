@@ -35,4 +35,32 @@ class Square:
             self.__size = value
 
     def __eq__(self, other):
-
+        """ ay no """
+        if not isinstance(other, Square):
+            return False
+        return (self.area()) == (other.area())
+    def __ne__(self, other):
+        """ tremendo """
+        if not isinstance(other, Square):
+            return False
+        return (self.area()) != (other.area())
+    def __lt__(self, other):
+        """ a """
+        if not isinstance(other, Square):
+            return False
+        return (self.area()) < (other.area())
+    def __le__(self, other):
+        """ a """
+        if not isinstance(other, Square):
+            return False
+        return (self.area()) <= (other.area())
+    def __gt__(self, other):
+        """ a """
+        if not isinstance(other, Square):
+            return False
+        return (self.area()) > (other.area())
+    def __ge__(self, other):
+        """ b """
+        if not isinstance(other, Square):
+            return False
+        return (self.area()) >= (other.area())
