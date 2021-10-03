@@ -15,3 +15,11 @@ TypeError: first_name must be a string
 >>> say_my_name("Walter", 12)
 Traceback (most recent call last):
 TypeError: last_name must be a string
+
+>>> say_my_name(12, "White")
+Traceback (innermost last):
+TypeError: first_name must be a string
+
+>>> say_my_name("Walter", 12)
+Traceback (innermost last):
+TypeError: last_name must be a string
