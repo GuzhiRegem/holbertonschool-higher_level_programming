@@ -24,7 +24,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
-        self.number_of_instances += 1
+        Rectangle.number_of_instances += 1
 
     @property
     def width(self):
@@ -87,4 +87,4 @@ class Rectangle:
     def __del__(self):
         """ del """
         print("Bye rectangle...")
-        self.number_of_instances -= 1
+        Rectangle.number_of_instances -= 1
