@@ -8,6 +8,9 @@
 
 class Rectangle:
     """ morite """
+    number_of_instances = 0
+    print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """ iniciar """
         if type(width) != int:
@@ -22,6 +25,7 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = height
+        self.number_of_instances += 1
 
     @property
     def width(self):
@@ -52,3 +56,36 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         else:
             self.__height = value
+
+    def area(self):
+        """ el area """
+        return self.__height * self.__width
+
+    def perimeter(self):
+        """ el perico """
+        if (self.__height == 0) or (self.__width == 0):
+            return 0
+        return (2 * self.__height) + (2 * self.__width)
+
+    def __str__(self):
+        """ str """
+        out = ""
+        if (self.__height == 0) or (self.__width == 0):
+            return out
+        for y in range(self.__height):
+            for x in range(self.__width):
+                out += str(self.print_symbol)
+            if y + 1 < self.__height:
+                out += "\n"
+        return out
+
+    def __repr__(self):
+        """ repr """
+        a = str(self.__width)
+        b = str(self.__height)
+        return 'Rectangle(' + a + ',' + b + ')'
+
+    def __del__(self):
+        """ del """
+        print("Bye rectangle...")
+        self.number_of_instances -= 1
