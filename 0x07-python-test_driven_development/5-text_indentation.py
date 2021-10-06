@@ -15,5 +15,6 @@ def text_indentation(text):
     for i in [".", "?", ":"]:
         a = i + "\n\n"
         txt1 = txt1.replace(i, a)
-    for a in txt1.split("\n"):
-        print(a.lstrip())
+    li = txt1.split("\n")
+    for a in range(len(li)):
+        print(li[a].lstrip()[:-1 + (a + 1 < len(li))])
