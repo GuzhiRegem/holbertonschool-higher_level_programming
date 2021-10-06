@@ -42,3 +42,16 @@ TypeError: div must be a number
 >>> matrix_divided(matrix, 0)
 Traceback (innermost last):
 ZeroDivisionError: division by zero
+
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix, float("inf"))
+[[0.0, 0.0, 0.0], [0.0, 0.0, 0.0]]
+
+>>> matrix = [[1, 2, 3], [4, 5, 6]]
+>>> matrix_divided(matrix)
+Traceback (innermost last):
+TypeError: matrix_divided() missing 1 required positional argument: 'div'
+
+>>> matrix_divided()
+Traceback (innermost last):
+TypeError: matrix_divided() missing 2 required positional arguments: 'matrix' and 'div'
