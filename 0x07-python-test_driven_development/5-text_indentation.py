@@ -17,4 +17,4 @@ def text_indentation(text):
         txt1 = txt1.replace(i, a)
     li = txt1.split("\n")
     for a in range(len(li)):
-        print(li[a].lstrip()[:-1 + (a + 1 < len(li))])
+        print(li[a].lstrip(), end="\n" if a + 1< len(li) else "")
