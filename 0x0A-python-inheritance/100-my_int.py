@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 """
-	100-my_int.py
-	module
-	return: nothing
+    100-my_int.py
+    module
+    return: nothing
 """
 
 
