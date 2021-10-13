@@ -7,6 +7,7 @@
 
 
 def add_attribute(a_class, a_name, a_value):
+    """ add attri """
     if hasattr(a_class, '__dict__'):
         setattr(a_class, a_name, a_value)
     else:
