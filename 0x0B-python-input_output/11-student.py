@@ -27,4 +27,5 @@ class Student:
 
     def reload_from_json(self, json):
         """ reload """
-        obj = {}
+        for a, b in json.items():
+            self.__dict__[a] = b
