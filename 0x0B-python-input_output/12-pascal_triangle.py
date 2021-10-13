@@ -10,7 +10,7 @@ def pascal_triangle(n):
     """ pascal """
     lis = [[1]]
     if n <= 0:
-        return lis
+        return []
     for i in range(n - 1):
         tmp = [0] * (len(lis[-1]) + 1)
         for num in range(len(lis[-1])):
