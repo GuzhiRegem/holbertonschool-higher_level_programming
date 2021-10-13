@@ -4,7 +4,7 @@
     module
     return: nothing
 """
-import json
+
 
 class Student:
     """ student """
@@ -21,6 +21,6 @@ class Student:
             for a, b in self.__dict__.items():
                 if a in attrs:
                     dic[a] = b
-            return json.dumps(dic)
+            return str(dic)
         else:
-            return json.dumps(self.__dict__)
+            return str(self.__dict__)

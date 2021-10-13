@@ -4,7 +4,6 @@
     module
     return: nothing
 """
-import json as son
 
 
 class Student:
@@ -22,12 +21,10 @@ class Student:
             for a, b in self.__dict__.items():
                 if a in attrs:
                     dic[a] = b
-            return son.dumps(dic)
+            return str(dic)
         else:
-            return son.dumps(self.__dict__)
+            return str(self.__dict__)
 
     def reload_from_json(self, json):
         """ reload """
-        obj = son.loads(json)
-        for a, b in obj.items():
-            self.__dict__[a] = b
+        obj = {}
