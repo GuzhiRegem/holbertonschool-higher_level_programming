@@ -21,6 +21,6 @@ class Student:
             for a, b in self.__dict__.items():
                 if a in attrs:
                     dic[a] = b
-            return str(dic)
+            return dict(dic)
         else:
-            return str(self.__dict__)
+            return dict(self.__dict__)
