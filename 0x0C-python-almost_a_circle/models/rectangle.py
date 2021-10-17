@@ -101,15 +101,15 @@ class Rectangle(Base):
         """ update """
         le = len(args)
         if le >= 1:
-            self.id = args[0]
+            setattr(self, "id", args[0])
         if le >= 2:
-            self.__width = args[1]
+            setattr(self, "width", args[1])
         if le >= 3:
-            self.__height = args[2]
+            setattr(self, "height", args[2])
         if le >= 4:
-            self.__x = args[3]
+            setattr(self, "x", args[3])
         if le >= 5:
-            self.__y = args[4]
+            setattr(self, "y", args[4])
         for key, value in kwargs.items():
             setattr(self, key, value)
 

@@ -61,7 +61,7 @@ class Base:
         filen = str(cls.__name__) + ".json"
         try:
             with open(filen, "r") as f:
-                li = json.loads(f.read())
+                li = cls.from_json_string(f.read())
                 out = []
                 for a in li:
                     out.append(cls.create(**a))
