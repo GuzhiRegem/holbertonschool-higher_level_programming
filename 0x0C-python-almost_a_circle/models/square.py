@@ -24,7 +24,6 @@ class Square(Rectangle):
         setattr(self, "width", value)
         setattr(self, "height", value)
 
-
     def __str__(self):
         """ str """
         st1 = "{}/{}".format(self.x, self.y)
@@ -35,7 +34,7 @@ class Square(Rectangle):
         """ update """
         le = len(args)
         if le >= 1:
-            setattr(self, "id", args[0]) 
+            setattr(self, "id", args[0])
         if le >= 2:
             setattr(self, "size", args[0])
         if le >= 3:

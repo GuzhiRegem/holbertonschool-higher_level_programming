@@ -51,7 +51,7 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ create """
-        dum = cls(1,1)
+        dum = cls(1, 1)
         dum.update(**dictionary)
         return dum
 
