@@ -27,11 +27,9 @@ class Rectangle(Base):
             raise TypeError(name + " must be an integer")
             return False
         if value < num:
-            sig = (">" if value == 1 else ">=")
+            sig = (">" if num == 1 else ">=")
             raise ValueError("{} must be {} 0".format(name, sig))
-            return True
-                
-                
+            return False
         return True
 
     @property
