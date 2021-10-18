@@ -36,11 +36,11 @@ class Square(Rectangle):
         if le >= 1:
             setattr(self, "id", args[0])
         if le >= 2:
-            setattr(self, "size", args[0])
+            setattr(self, "size", args[1])
         if le >= 3:
-            setattr(self, "x", args[0])
+            setattr(self, "x", args[2])
         if le >= 4:
-            setattr(self, "y", args[0])
+            setattr(self, "y", args[3])
         for key, value in kwargs.items():
             setattr(self, key, value)
 
