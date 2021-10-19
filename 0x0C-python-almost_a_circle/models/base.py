@@ -24,7 +24,7 @@ class Base:
         """ to json """
         if list_dictionaries is None:
             return "[]"
-        if len(list_dictionaries) == 0:
+        if list_dictionaries == []:
             return "[]"
         return json.dumps([a for a in list_dictionaries])
 
