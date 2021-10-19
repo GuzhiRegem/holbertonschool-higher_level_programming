@@ -26,7 +26,7 @@ class Base:
             return "[]"
         if list_dictionaries == []:
             return "[]"
-        return json.dumps([a for a in list_dictionaries])
+        return json.dumps(list_dictionaries)
 
     @classmethod
     def save_to_file(cls, list_objs):
