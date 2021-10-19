@@ -52,7 +52,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ create """
-        dum = cls(1, 1)
+        if cls == Rectangle:
+            dum = cls(1, 1)
+        else:
+            dum = cls(1)
         dum.update(**dictionary)
         return dum
 
