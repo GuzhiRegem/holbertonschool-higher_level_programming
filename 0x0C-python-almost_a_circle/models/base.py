@@ -26,7 +26,10 @@ class Base:
             return "[]"
         if len(list_dictionaries) == 0:
             return "[]"
-        return json.dumps(list(list_dictionaries))
+        out = []
+        for a in list_dictionaries:
+            out.append(dict(a))
+        return json.dumps(out)
 
     @classmethod
     def save_to_file(cls, list_objs):
