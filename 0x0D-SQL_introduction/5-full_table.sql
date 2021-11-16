@@ -1,2 +1,2 @@
 -- sql
-DESC first_table
+SELECT * FROM information_schema.tables;
