@@ -1,2 +1,2 @@
 -- sql
-SELECT * FROM information_schema.tables;
+SHOW CREATE TABLE first_table
