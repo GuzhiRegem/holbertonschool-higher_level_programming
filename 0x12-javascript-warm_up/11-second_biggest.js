@@ -8,7 +8,7 @@ if (argv.length > 3) {
   for (i = 2; argv[i]; i++) {
     list.push(parseInt(argv[i]));
   }
-  list.sort();
+  list.sort(function (a, b) { return a - b; });
   second = list[i - 4];
 }
 console.log(second);
