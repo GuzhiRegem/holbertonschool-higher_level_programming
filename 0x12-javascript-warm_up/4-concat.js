@@ -1,5 +1,5 @@
 #!/usr/bin/node
 
 const { argv } = require('process');
-let out = argv[2] + ' is ' + argv[3];
+const out = argv[2] + ' is ' + argv[3];
 console.log(out);
