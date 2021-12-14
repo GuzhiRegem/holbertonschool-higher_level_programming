@@ -1,3 +1,6 @@
 #!/usr/bin/node
-
-exports.logMe = function (item)
+let logMeCounter = -1;
+exports.logMe = function (item) {
+  logMeCounter++;
+  console.log(logMeCounter + ': ' + item);
+};
