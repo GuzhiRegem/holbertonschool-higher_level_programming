@@ -1,2 +1,3 @@
 #!/bin/bash
-curl -s $1
+#comment
+curl -sLf "$1"

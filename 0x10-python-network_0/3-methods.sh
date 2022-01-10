@@ -1,2 +1,3 @@
 #!/bin/bash
-curl -s $1
+#comment
+curl -sX OPTIONS $1 -H 
