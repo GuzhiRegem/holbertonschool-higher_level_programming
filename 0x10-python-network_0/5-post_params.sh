@@ -1,3 +1,3 @@
 #!/bin/bash
 #comment
-curl -s $1
+curl -sLf -X POST "$1"
