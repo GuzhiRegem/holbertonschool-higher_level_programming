@@ -12,5 +12,5 @@ if __name__ == "__main__":
     js = {
         "email":sys.argv[2]
     }
-    r = requests.get(sys.argv[1], json=js)
+    r = requests.get(sys.argv[1], data=js)
     print(r.text)
