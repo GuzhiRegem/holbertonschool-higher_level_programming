@@ -7,16 +7,13 @@
 
 def find_peak(list_of_integers):
     """ find peak """
-    out = None
-    for idx, val in enumerate(list_of_integers[1:-1]):
-        ind = idx + 1
-        if list_of_integers[ind - 1] > val:
-            continue
-        if list_of_integers[ind + 1] > val:
-            continue
-        if type(out) == int:
-            if out < val:
-                out = val
-        else:
-            out = val
-    return out
+    li = list_of_integers
+    l = len(li)
+    if l == 0:
+        return
+    m = l // 2
+    if (m == l - 1 or li[m] >= li[m + 1]) and (m == 0 or li[m] >= li[m - 1]):
+        return li[m]
+    if m != l - 1 and li[m + 1] > li[m]:
+        return find_peak(li[m + 1:])
+    return find_peak(li[:m])
