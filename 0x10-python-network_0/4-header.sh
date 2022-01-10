@@ -1,3 +1,3 @@
 #!/bin/bash
 #comment
-curl -s $1
+curl -sLf -H "X-School-User-Id: 98" "$1"
