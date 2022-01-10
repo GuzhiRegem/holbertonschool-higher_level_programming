@@ -1,3 +1,3 @@
 #!/bin/bash
 #comment
-curl -sLf -X POST --data 'email=test@gmail.com' --data 'subject=I will always be here for PLD' "$1"
+curl -sX POST -d 'email=test@gmail.com&subject=I will always be here for PLD' "$1"
