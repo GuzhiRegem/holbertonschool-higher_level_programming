@@ -11,7 +11,7 @@ import sys
 if __name__ == "__main__":
     requests.packages.urllib3.disable_warnings(requests.packages.urllib3.exceptions.InsecureRequestWarning)
     r = requests.get("https://api.github.com/user", verify=False, auth=requests.auth.HTTPBasicAuth(sys.argv[1], sys.argv[2]))
-    try:
+    if "id" in r.json():
         print(r.json().get("id"))
-    except:
+    else:
         print("None")
