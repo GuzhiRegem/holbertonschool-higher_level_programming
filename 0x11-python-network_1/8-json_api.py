@@ -9,8 +9,10 @@ import sys
 
 
 if __name__ == "__main__":
-    q = "" if len(sys.argv) < 2 else sys.argv[1]
-    r = requests.post("http://0.0.0.0:5000/search_user", data={"q": q})
+    data = {"q":""}
+    if len(sys.argv) > 1:
+        data["q"] = sys.argv[1]
+    r = requests.post("http://0.0.0.0:5000/search_user", data=data)
     try:
         d = r.json()
         if "id" not in d or "name" not in d:
