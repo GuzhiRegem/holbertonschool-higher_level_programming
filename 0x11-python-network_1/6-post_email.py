@@ -9,4 +9,8 @@ import sys
 
 
 if __name__ == "__main__":
-
+    js = {
+        "email":sys.argv[2]
+    }
+    r = requests.get(sys.argv[1], json=js)
+    print(r.text)
