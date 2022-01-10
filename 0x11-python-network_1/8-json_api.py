@@ -10,7 +10,8 @@ import sys
 
 if __name__ == "__main__":
     q = "" if len(sys.argv) <= 1 else sys.argv[1]
-    r = requests.post(sys.argv[1], data={"q":q})
+    data = {"q": q}
+    r = requests.post(sys.argv[1], data=data)
     try:
         d = r.dict()
         if len(r) > 0:
