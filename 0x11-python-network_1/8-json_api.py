@@ -10,10 +10,10 @@ import sys
 
 if __name__ == "__main__":
     q = "" if len(sys.argv) <= 1 else sys.argv[1]
-    r = requests.post("http://0.0.0.0:5000/search_user", {"q": q})
+    r = requests.post("http://0.0.0.0:5000/search_user", data={"q": q})
     try:
         d = r.json()
-        if not d:
+        if "id" not in d or "name" not in d:
             print("No result")
         else:
             print("[{}] {}".format(r.get("id"), r.get("name")))
