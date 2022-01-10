@@ -15,7 +15,7 @@ if __name__ == "__main__":
     r = requests.post("http://0.0.0.0:5000/search_user", data=data)
     try:
         d = r.json()
-        if "id" not in d or "name" not in d:
+        if "id" not in d.keys() or "name" not in d.keys():
             print("No result")
         else:
             print("[{}] {}".format(r.get("id"), r.get("name")))
