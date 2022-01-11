@@ -18,6 +18,6 @@ if __name__ == "__main__":
         if "id" not in d.keys() or "name" not in d.keys():
             print("No result")
         else:
-            print("[{}] {}".format(r.get("id"), r.get("name")))
+            print("[{}] {}".format(d.get("id"), d.get("name")))
     except ValueError:
         print("Not a valid JSON")
