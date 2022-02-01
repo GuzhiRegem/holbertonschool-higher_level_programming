@@ -3,7 +3,7 @@ const request = require('request');
 const url = process.argv[2];
 const search = 'https://swapi-api.hbtn.io/api/people/18/';
 request(url, function (error, response, body) {
-  if (!error) {
+  if (!error && response.statusCode === 200) {
     let count = 0;
     const results = JSON.parse(body).results;
     for (let i = 0; results[i]; i++) {
