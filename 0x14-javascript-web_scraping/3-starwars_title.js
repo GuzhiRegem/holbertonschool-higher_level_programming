@@ -6,7 +6,7 @@ request(url, function (error, response, body) {
   if (!error) {
     const results = JSON.parse(body).results;
     for (let i = 0; results[i]; i++) {
-      if (results[i].episode_id === parseInt(num)) {
+      if (i + 1 === parseInt(num)) {
         console.log(results[i].title);
       }
     }
